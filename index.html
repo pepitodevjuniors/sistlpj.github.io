@@ -94,21 +94,24 @@
                 <h3>API de Integración para Envío de WhatsApp</h3>
                 <p>Esta API permite la integración con con sistemas ERP (C#,PHP,PYTHON) WhatsApp para enviar mensajes  y automatizar la comunicación con tus clientes.</p>
                 <p>Precio: S/ 200.00</p>
-                <button>Mostrar QR</button>
+                <button onclick="mostrarQR('qr1')">Mostrar QR</button>
+                <img id="qr1" class="qr" src="qr-api.png" style="display: none;" alt="Código QR API">
             </div>
             <div class="producto">
                 <img src="logi.jpg" alt="Sistema Logístico para Control de Inventario">
                 <h3>Sistema Logístico para Control de Inventario</h3>
                 <p>Un sistema robusto para gestionar el inventario de tu negocio, mejorando la eficiencia y reduciendo errores en el manejo de productos.</p>
                 <p>Precio: S/ 1500.00</p>
-                <button>Mostrar QR</button>
+                <button onclick="mostrarQR('qr2')">Mostrar QR</button>
+                <img id="qr2" class="qr" src="qr-logi.png" style="display: none;" alt="Código QR Logístico">
             </div>
             <div class="producto">
                 <img src="validador.jpeg" alt="Validar Masivo de WhatsApp">
                 <h3>Validar Masivo de WhatsApp</h3>
                 <p>Macro que permite validar múltiples números de WhatsApp en un solo clic, facilitando la gestión de contactos. (1 numero por segundo)</p>
                 <p>Precio: S/ 150.00</p>
-                <button>Mostrar QR</button>
+                <button onclick="mostrarQR('qr3')">Mostrar QR</button>
+                <img id="qr3" class="qr" src="qr-validador.png" style="display: none;" alt="Código QR Validador">
             </div>
         </section>
 
@@ -122,5 +125,15 @@
     <footer>
         <p>&copy; 2024</p>
     </footer>
+    <script>
+        function mostrarQR(id) {
+            var qr = document.getElementById(id);
+            if (qr.style.display === "none" || qr.style.display === "") {
+                qr.style.display = "block";
+            } else {
+                qr.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
